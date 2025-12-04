@@ -9,12 +9,12 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
 from aiogram.utils.keyboard import InlineKeyboardBuilder  # Правильный импорт
-from tokens import BOT_TOKEN
+from tokens import BOT_TOKEN, hug_url, OPENAI_API_KEY
 from math import ceil
 
 client = OpenAI(
-    base_url="https://router.huggingface.co/v1",
-    api_key="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",
+    base_url=hug_url,
+    api_key=OPENAI_API_KEY,
 )
 
 class Metrics():
