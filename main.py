@@ -44,8 +44,7 @@ logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s %(levelname)s %(message)s")
 
 # Правильная инициализация бота в aiogram 3.7.0+
-bot = Bot(
-    token=BOT_TOKEN,
+bot = Bot(token=BOT_TOKEN,
     default=DefaultBotProperties(parse_mode=ParseMode.HTML)
 )
 dp = Dispatcher()
