@@ -11,6 +11,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.utils.keyboard import InlineKeyboardBuilder  # Правильный импорт
 from tokens import BOT_TOKEN, hug_url, OPENAI_API_KEY
 from math import ceil
+from background import keep_alive
 
 client = OpenAI(
     base_url=hug_url,
@@ -448,5 +449,5 @@ async def main():
     """Запуск бота"""
     await dp.start_polling(bot)
 
-if __name__ == '__main__':
-    asyncio.run(main())
+keep_alive()
+asyncio.run(main())
